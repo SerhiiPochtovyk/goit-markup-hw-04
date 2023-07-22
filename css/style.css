@@ -65,7 +65,6 @@ body {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-  display: flex;
 }
 
 /* hidden title  */
@@ -90,14 +89,20 @@ body {
   align-items: center;
 }
 
-.nav,
-.address {
+.nav
+ {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header {
   display: flex;
+  justify-content: space-between;
   border-bottom: 1px solid #e7e9fc;
+  box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 2px 1px 0px rgba(46, 47, 66, 0.08);
 }
 
 .page-nav {
@@ -118,13 +123,11 @@ body {
 
 .address {
   display: flex;
-  align-items: center;
-  margin-left: auto;
-  color: var(--text-color);
-  font-weight: 400;
+  gap: 40px;
 }
 
 .address-item {
+  
   margin-right: 40px;
 }
 
@@ -184,27 +187,27 @@ body {
   color: var(--hover-color);
 }
 
-/* main-page banner */
 /* section first */
 
-/* background section */
-.background {
-  height: 600px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: var(--primary-color);
-}
-
+/* ========================hero=========== */
 .hero {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
   padding: 188px 0 188px;
   text-align: center;
   background-color: var(--primary-color);
-  border-top: 1px solid #e7e9fc;
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/people-office.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .section {
-  display: flex;
-  flex-wrap: wrap;
   padding-top: 120px;
   padding-bottom: 120px;
 }
@@ -219,23 +222,18 @@ body {
   color: var(--white-color);
 }
 
-.btn-banner {
-  display: block;
-  background-color: var(--accent-color);
-  font-family: "Roboto", sans-serif;
+.btn-banner { 
+  min-width: 169px;
+  padding: 16px 32px;
+  font-family: inherit;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
-  color: var(--white-color);
-  cursor: pointer;
   border-radius: 4px;
-  min-width: 169px;
-  padding: 16px 31px;
-  border: transparent;
-  margin-top: 48px;
-  height: 56px;
-  margin: 0 auto;
+  color: var(--white-color);
+  background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
 .btn-banner:hover,
@@ -256,12 +254,11 @@ body {
 
 .menu-list {
   display: flex;
-  }
+}
 
 .menu-item {
   width: calc((100% - 72px) / 4);
   margin-right: 24px;
-  
 }
 
 .menu-item:last-child {
