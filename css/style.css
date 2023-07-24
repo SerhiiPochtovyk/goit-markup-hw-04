@@ -544,6 +544,17 @@ body {
   color: var(--white, #ffffff);
 }
 
+.footer-social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-social-link:focus,
+.footer-social-link:hover {
+  background-color: #31d0aa;
+}
+
 /* ===============portfolio================== */
 
 /* header  */
@@ -669,6 +680,10 @@ body {
   padding-top: 120px;
 }
 
+.footer-portfolio {
+  background-color: #2E2F42;
+}
+
 .footer-social-media {
   display: flex;
   justify-content: flex-start;
@@ -702,4 +717,9 @@ body {
 
 .footer-link {
   background-color: #4d5ae5;
+}
+
+.footer-link:hover,
+.footer-link:focus {
+  background-color: #31d0aa;
 }
